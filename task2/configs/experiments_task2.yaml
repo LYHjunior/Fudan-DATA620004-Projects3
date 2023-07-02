@@ -1,0 +1,18 @@
+MODEL:
+  name: 'ViT'
+DATA:
+  name: 'cifar-100'
+  augmentation: True
+  cutout : False
+  cutmix : False
+  mixup :  True
+  root : '/remote-home/bhwu/deeplearning/FDU-DeepLearningNeuralNetwork-main/final_homework/task2/dataset/'
+# cutout config
+CUTOUT:
+  n_holes: 1
+  length: 16
+TRAIN:
+  device: 'cuda:0'
+  batch_size: 128
+  epochs: 1000
+  lr: 0.001
